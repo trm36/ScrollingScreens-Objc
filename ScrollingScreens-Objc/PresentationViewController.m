@@ -27,7 +27,7 @@
     
     self.dataSource = [PageViewControllerDataSource new];
     self.pageViewController.dataSource = self.dataSource;
-    [self.pageViewController setViewControllers:@[[self.dataSource initialViewController]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+    [self.pageViewController setViewControllers:@[[self.dataSource viewControllerAtIndex:0]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
     
     
     // We need to add the pageViewController as a childViewController (so that the lifecycle methods get called together. And then we can add the main view of the pageViewController to this viewController's main view.

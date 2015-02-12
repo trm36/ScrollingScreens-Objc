@@ -25,7 +25,7 @@
         // We'll just fill the contentController with just months for now.
         
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        sharedInstance.content = [[dateFormatter monthSymbols] copy];
+        sharedInstance.content = [[dateFormatter weekdaySymbols] copy];
     });
     return sharedInstance;
 }

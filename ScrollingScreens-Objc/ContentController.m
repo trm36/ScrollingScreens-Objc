@@ -22,7 +22,7 @@
     dispatch_once(&onceToken, ^{
         sharedInstance = [[ContentController alloc] init];
 
-        // We'll just fill the contentController with just months for now.
+        // We'll just fill the contentController with just days of the week for now.
         
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         sharedInstance.content = [[dateFormatter weekdaySymbols] copy];

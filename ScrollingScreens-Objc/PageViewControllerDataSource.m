@@ -49,4 +49,8 @@
     return viewController;
 }
 
+- (NSInteger)pageCount {
+    return [ContentController sharedInstance].content.count;
+}
+
 @end

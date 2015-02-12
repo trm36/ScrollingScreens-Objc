@@ -9,10 +9,12 @@
 #import "PresentationViewController.h"
 
 #import "PageViewControllerDataSource.h"
+#import "ContentViewController.h"
 
 @interface PresentationViewController () <UIPageViewControllerDelegate>
 
 @property (nonatomic, strong) UIPageViewController *pageViewController;
+@property (nonatomic, strong) UIPageControl *pageControl;
 @property (nonatomic, strong) PageViewControllerDataSource *dataSource;
 
 @end
@@ -24,6 +26,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    self.pageViewController.delegate = self;
     
     self.dataSource = [PageViewControllerDataSource new];
     self.pageViewController.dataSource = self.dataSource;
@@ -35,6 +38,26 @@
     [self.view addSubview:self.pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
 
+    self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 40, self.view.frame.size.width, 40)];
+    [self.view addSubview:self.pageControl];
+    
+    self.pageControl.numberOfPages = self.dataSource.pageCount;
+}
+
+#pragma mark - UIPageViewController
+
+- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers {
+
+    ContentViewController *viewController = pendingViewControllers[0];
+    self.pageControl.currentPage = viewController.index;
+}
+
+- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {
+
+    ContentViewController *viewController = previousViewControllers[0];
+    if (!completed) {
+        self.pageControl.currentPage = viewController.index;
+    }
 }
 
 @end

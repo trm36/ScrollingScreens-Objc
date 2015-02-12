@@ -13,4 +13,6 @@
 
 - (UIViewController *)initialViewController;
 
+- (NSInteger)pageCount;
+
 @end

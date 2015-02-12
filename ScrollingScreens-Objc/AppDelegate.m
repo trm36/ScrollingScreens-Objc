@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "PresentationViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    UIPageControl *pageControl = [UIPageControl appearanceWhenContainedIn:[PresentationViewController class], nil];
+    pageControl.pageIndicatorTintColor = [UIColor darkGrayColor];
+    pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
+    pageControl.backgroundColor = [UIColor lightGrayColor];
+    
     return YES;
 }
 

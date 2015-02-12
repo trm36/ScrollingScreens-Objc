@@ -19,3 +19,4 @@ A simple iOS app demonstrating the UIPageViewController
 - Initialize self.dataSource method
 - Set the dataSource of self.pageViewController to the self.dataSource
 - Call the setViewControllers method and pass in the initialViewController
+- See https://gist.github.com/jkhowland/b84b4f11aacce5ff4ca1

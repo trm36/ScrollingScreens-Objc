@@ -16,6 +16,7 @@
 		4FBD85711A8C7C0900557592 /* ScrollingScreens_ObjcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD85701A8C7C0900557592 /* ScrollingScreens_ObjcTests.m */; };
 		4FBD85C01A8C920C00557592 /* ContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD85BF1A8C920C00557592 /* ContentController.m */; };
 		4FBD85C61A8CA27200557592 /* PresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD85C51A8CA27200557592 /* PresentationViewController.m */; };
+		4FBD85CB1A8CA30700557592 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD85C81A8CA30700557592 /* ContentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		4FBD85BF1A8C920C00557592 /* ContentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentController.m; sourceTree = "<group>"; };
 		4FBD85C41A8CA27200557592 /* PresentationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentationViewController.h; sourceTree = "<group>"; };
 		4FBD85C51A8CA27200557592 /* PresentationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentationViewController.m; sourceTree = "<group>"; };
+		4FBD85C71A8CA30700557592 /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
+		4FBD85C81A8CA30700557592 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 				4FBD855C1A8C7C0900557592 /* ViewController.m */,
 				4FBD85C41A8CA27200557592 /* PresentationViewController.h */,
 				4FBD85C51A8CA27200557592 /* PresentationViewController.m */,
+				4FBD85C71A8CA30700557592 /* ContentViewController.h */,
+				4FBD85C81A8CA30700557592 /* ContentViewController.m */,
 				4FBD85BE1A8C920C00557592 /* ContentController.h */,
 				4FBD85BF1A8C920C00557592 /* ContentController.m */,
 				4FBD855E1A8C7C0900557592 /* Main.storyboard */,
@@ -231,6 +236,7 @@
 			files = (
 				4FBD85C01A8C920C00557592 /* ContentController.m in Sources */,
 				4FBD855D1A8C7C0900557592 /* ViewController.m in Sources */,
+				4FBD85CB1A8CA30700557592 /* ContentViewController.m in Sources */,
 				4FBD855A1A8C7C0900557592 /* AppDelegate.m in Sources */,
 				4FBD85C61A8CA27200557592 /* PresentationViewController.m in Sources */,
 				4FBD85571A8C7C0900557592 /* main.m in Sources */,

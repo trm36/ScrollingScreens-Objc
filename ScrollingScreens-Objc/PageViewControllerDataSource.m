@@ -13,15 +13,6 @@
 
 @implementation PageViewControllerDataSource
 
-- (UIViewController *)initialViewController {
-
-    ContentViewController *viewController = [ContentViewController new];
-    viewController.index = 0;
-    viewController.name = [[ContentController sharedInstance].content[0] description];
-    
-    return viewController;
-}
-
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
 
     NSInteger beforeIndex = ((ContentViewController *)viewController).index - 1;

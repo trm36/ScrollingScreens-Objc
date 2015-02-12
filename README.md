@@ -2,6 +2,8 @@
 
 A simple iOS app demonstrating the UIPageViewController
 
+## Part 1: UIPageViewController
+
 ### Step 1: Create a PageViewControllerDataSource class
 - In the class add 4 instance methods
   - initialViewController returns a ContentViewController with the first item in the content
@@ -20,3 +22,24 @@ A simple iOS app demonstrating the UIPageViewController
 - Set the dataSource of self.pageViewController to the self.dataSource
 - Call the setViewControllers method and pass in the initialViewController
 - See https://gist.github.com/jkhowland/b84b4f11aacce5ff4ca1
+
+## Part 2: UIPageControl
+
+### Step 3: Add pageCount to the PageViewControllerDataSource
+- Add the method pageCount that returns an NSInteger
+- Return the ContentController's content count
+ 
+### Step 4: Add UIPageControl property and delegate methods to PageViewController
+- Add UIPageControl as a property
+- Initialize the property and set the number of pages to the dataSource's pageCount
+- Add willTransitionToViewControllers
+  - The method should get the ContentViewController out of the pendingViewControllers array, and set the currentPage to the viewController's index
+- Add didFinishAnimating:previousViewControllers method
+  - The method should get the ContentViewController out of the previousViewControllers array, and if completed is false you should set the currentPage to the viewController's index (because they never landed on the new page)
+  - See https://gist.github.com/jkhowland/383322c48976acc13a0b
+
+### Bonus: Use built in UIPageControl (with UIAppearance)
+- Add a presentationCountForPageViewController method to the PageViewControllerDataSource that returns the content count
+- Add a presentationIndexForPageViewController method to the PageViewControllerDataSource that returns 0
+- Update the UIPageControl appearance in the app delegate
+  - See https://gist.github.com/jkhowland/fdbd269af0df8052a6a9

@@ -21,6 +21,7 @@ A simple iOS app demonstrating the UIPageViewController
 - Initialize self.dataSource method
 - Set the dataSource of self.pageViewController to the self.dataSource
 - Call the setViewControllers method and pass in the initialViewController
+- Add the pageViewController as a childViewController of the PresentationViewController
 - See https://gist.github.com/jkhowland/b84b4f11aacce5ff4ca1
 
 ## Part 2: UIPageControl

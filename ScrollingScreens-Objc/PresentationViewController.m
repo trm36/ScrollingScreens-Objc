@@ -29,8 +29,8 @@
     self.pageViewController.dataSource = self.dataSource;
     [self.pageViewController setViewControllers:@[[self.dataSource viewControllerAtIndex:0]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
     
+    // We need to add the pageViewController as a childViewController (so that the lifecycle methods get called together (ex. viewDidLoad, viewDidUnload, dealloc). Then we can add the main view of the pageViewController to this viewController's main view. This is not the only way to do this, but it is the way that Apple does it, and the way you are learning it today.
     
-    // We need to add the pageViewController as a childViewController (so that the lifecycle methods get called together. And then we can add the main view of the pageViewController to this viewController's main view.
     [self addChildViewController:self.pageViewController];
     [self.view addSubview:self.pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
